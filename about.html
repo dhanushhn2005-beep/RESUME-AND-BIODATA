@@ -1,98 +1,233 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bio — Achintya B S</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-    .about h2 {
-      background:linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 50%, var(--success) 100%);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      background-clip:text;
-      font-size: 2rem;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhanush HN — Student Portfolio</title>
+
+<style>
+    :root{
+        --bg:#f5fcfc;
+        --card:#ffffff;
+        --muted:#5f6b7a;
+        --teal:#0ea5a4;
+        --teal-dark:#0a7e7d;
+        --radius:14px;
+        --shadow:0 8px 25px rgba(0,0,0,0.08);
     }
-    .about-intro {
-      background:rgba(30, 58, 95, 0.6);
-      backdrop-filter:blur(5px);
-      padding:2rem;
-      border-radius:10px;
-      border:1px solid rgba(77, 143, 255, 0.2);
-      margin-bottom:2rem;
+
+    body{
+        margin:0;
+        font-family:Arial, Helvetica, sans-serif;
+        background:linear-gradient(180deg, var(--bg), #ffffff);
+        padding:20px;
+        display:flex;
+        justify-content:center;
     }
-    .interests-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
+
+    .container{
+        width:100%;
+        max-width:900px;
     }
-    .interest-card {
-      background:rgba(30, 58, 95, 0.5);
-      border-left:4px solid var(--accent);
-      padding:1.5rem;
-      border-radius:8px;
-      transition:all 0.3s ease;
+
+    /* HEADER */
+    header{
+        background:var(--card);
+        padding:20px;
+        border-radius:var(--radius);
+        display:flex;
+        align-items:center;
+        gap:15px;
+        box-shadow:var(--shadow);
     }
-    .interest-card:hover {
-      background:rgba(30, 58, 95, 0.8);
-      transform:translateY(-5px);
-      box-shadow:0 8px 25px rgba(11, 95, 255, 0.15);
+
+    .photo{
+        width:100px;
+        height:100px;
+        border-radius:12px;
+        background:#e1ffff;
+        display:grid;
+        place-items:center;
+        overflow:hidden;
+        border:1px solid #c9f5f5;
     }
-    .interest-card strong {
-      color: var(--accent-light);
+    .photo img{width:100%;height:100%;object-fit:cover;}
+
+    h1{margin:0;font-size:1.4rem;}
+    .role{color:var(--teal-dark);font-weight:bold;margin-top:4px;}
+    .contact{color:var(--muted);font-size:0.95rem;margin-top:6px;}
+    .btn{
+        display:inline-block;
+        margin-top:10px;
+        background:var(--teal);
+        color:white;
+        padding:8px 14px;
+        border-radius:8px;
+        text-decoration:none;
+        font-weight:bold;
+        box-shadow:var(--shadow);
     }
-  </style>
+
+    /* CARDS */
+    section{
+        background:var(--card);
+        margin-top:18px;
+        padding:18px;
+        border-radius:var(--radius);
+        box-shadow:var(--shadow);
+    }
+    h2{margin-top:0;font-size:1.2rem;color:var(--teal-dark);}
+    .lead{color:var(--muted);}
+
+    /* EDUCATION + SKILLS Layout */
+    .grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+    ul{margin:0;padding-left:18px;}
+    li{margin-bottom:6px;}
+
+    .skill-box{
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+    }
+    .skill{
+        background:#dff9f9;
+        padding:6px 10px;
+        border-radius:20px;
+        font-weight:bold;
+        font-size:0.9rem;
+        color:var(--teal-dark);
+    }
+
+    /* Biodata */
+    .bio-list{
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+    .bio-list li{
+        margin-bottom:8px;
+        font-size:1rem;
+    }
+
+    footer{
+        text-align:center;
+        margin-top:20px;
+        color:var(--muted);
+    }
+
+    @media(max-width:700px){
+        .grid{grid-template-columns:1fr;}
+        header{flex-direction:row;}
+    }
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="site-title">Achintya B S</h1>
-      <nav class="main-nav" aria-label="Main Navigation">
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="about.html" class="active">Bio</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container about">
-    <section class="about-intro">
-      <h2>Bio</h2>
-      <p>I am a Computer Science engineering student based in Bangalore, India. I am passionate about building scalable backend systems and cloud infrastructure. My interests span from distributed systems architecture to DevOps automation and observability.</p>
-      <p>Currently focusing on advanced Kubernetes patterns, microservices resilience, and cloud-native application design. Active contributor to open-source DevOps projects.</p>
-    </section>
+<div class="container">
 
+    <!-- HEADER -->
+    <header>
+        <div class="photo">
+            <!-- Replace profile.jpg with your uploaded image -->
+            <img src="profile.jpg" alt="Your Photo">
+        </div>
+
+        <div>
+            <h1>Dhanush HN</h1>
+            <div class="role">CSE Student — AIT College, Chikkamagaluru</div>
+
+            <div class="contact">
+                📧 dhanushh2005@email.com <br>
+                📞 9019372113 <br>
+                📍 Chikkamagaluru
+            </div>
+
+            <a class="btn" href="resume.pdf" download>Download Resume</a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
     <section>
-      <h3>Interests</h3>
-      <div class="interests-grid">
-        <div class="interest-card">
-          <strong>Distributed Systems</strong>
-          <p>Designing and implementing highly scalable, fault-tolerant systems with focus on consistency and partition tolerance.</p>
-        </div>
-        <div class="interest-card">
-          <strong>Cloud & Kubernetes</strong>
-          <p>Building production-ready containerized applications, optimizing resource utilization, and implementing GitOps workflows.</p>
-        </div>
-        <div class="interest-card">
-          <strong>Observability & Monitoring</strong>
-          <p>Implementing comprehensive monitoring, logging, and tracing solutions for complex distributed architectures.</p>
-        </div>
-        <div class="interest-card">
-          <strong>CI/CD & DevOps</strong>
-          <p>Automating deployment pipelines, infrastructure provisioning, and enabling rapid, reliable software delivery.</p>
-        </div>
-      </div>
+        <h2>About</h2>
+        <p class="lead">
+            Hello, I am Dhanush, a Computer Science Engineering student at AIT College, Chikkamagaluru.
+            I enjoy learning new technologies, building web projects, and improving my skills every day.
+        </p>
+        <p>
+            I completed my PUC at St. Mary’s College with 88% and my schooling at JES School. 
+            I am passionate about creating modern websites and exploring GitHub projects.
+        </p>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© Achintya B S</small>
-    </div>
-  </footer>
+    <!-- EDUCATION + SKILLS -->
+    <section>
+        <div class="grid">
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/script.js"></script>
+            <!-- Education -->
+            <div>
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>BE — CSE</strong>, AIT College, Chikkamagaluru (2022 — Present)</li>
+                    <li><strong>PUC — Science</strong>, St Mary’s College (88%)</li>
+                    <li><strong>School</strong>, JES School</li>
+                </ul>
+            </div>
+
+            <!-- Skills -->
+            <div>
+                <h2>Skills</h2>
+                <div class="skill-box">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">Git</div>
+                    <div class="skill">Problem Solving</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+        <h2>Projects</h2>
+        <p class="lead">Replace these with your real project details:</p>
+
+        <ul>
+            <li>
+                <strong>Notes App</strong> — A simple notes application using HTML, CSS, JS.
+            </li>
+            <li>
+                <strong>Portfolio Website</strong> — A personal portfolio hosted on GitHub Pages.
+            </li>
+        </ul>
+    </section>
+
+    <!-- BIODATA -->
+    <section>
+        <h2>Resume / Biodata</h2>
+        <ul class="bio-list">
+            <li><strong>Name:</strong> DHANUSH HN</li>
+            <li><strong>Email:</strong> dhanushh2005@email.com</li>
+            <li><strong>Phone:</strong> 9019372113</li>
+            <li><strong>Address:</strong> Chikkamagaluru</li>
+            <li><strong>Course:</strong> BE — CSE</li>
+            <li><strong>College:</strong> AIT College, Chikkamagaluru</li>
+            <li><strong>PUC:</strong> St Mary’s College (88%)</li>
+            <li><strong>School:</strong> JES School</li>
+            <li><strong>Languages:</strong> English, Kannada, Hindi</li>
+        </ul>
+    </section>
+
+    <footer>
+        © 2025 — Portfolio of Dhanush HN
+    </footer>
+
+</div>
+
 </body>
 </html>
