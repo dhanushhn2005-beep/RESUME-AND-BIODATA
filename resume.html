@@ -3,126 +3,157 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resume — Achintya B S</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Resume — Dhanush H N</title>
+  <meta name="description" content="Resume of Dhanush H N — CSE Student, AIT College, Chikkamagaluru. Education: JES School, St Mary's PUC (88%), AIT CSE." />
   <style>
-    /* simplified print-friendly resume overrides */
-    @media print {
-      body { color: #000; background: #fff; }
-      .site-header, .site-footer, .nav-toggle, .main-nav { display:none }
-      .container { width: 100%; }
+    :root{
+      --bg:#fafcff;
+      --card:#ffffff;
+      --muted:#556070;
+      --accent:#0ea5a4;
+      --accent-dark:#068a86;
+      --radius:12px;
+      --maxw:980px;
+      --pad:16px;
     }
-    .resume-header { display:flex; justify-content:space-between; align-items:flex-start; }
-    .resume section { margin: 1.5rem 0; }
-    .resume-skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
-    .skill-tag { 
-      display: inline-block;
-      background: rgba(77, 143, 255, 0.2);
-      border: 1px solid var(--accent);
-      color: var(--accent-light);
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#ffffff);
+      color:#0b2730;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:20px;
+      display:flex;
+      justify-content:center;
     }
-    .skill-tag:hover {
-      background: rgba(77, 143, 255, 0.4);
-      transform: translateY(-2px);
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 12px 40px rgba(2,6,23,0.06);
+      padding:var(--pad);
+    }
+
+    .resume-header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-start}
+    .resume-header h2{margin:0;font-size:1.4rem}
+    .contact-small{color:var(--muted);font-size:0.95rem}
+
+    .section{margin-top:18px}
+    .section h3{margin:0 0 8px 0;color:var(--accent-dark)}
+    p{margin:0 0 8px 0;color:#12343a}
+    .muted{color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .skill-tag{
+      display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(14,165,164,0.09);
+      color:var(--accent-dark);font-weight:700;font-size:0.9rem;border:1px solid rgba(6,127,124,0.06)
+    }
+
+    .project{margin-bottom:12px}
+    .project strong{display:block;font-weight:700}
+    .project .meta{color:var(--muted);font-size:0.95rem;margin-bottom:6px}
+
+    dl{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    dt{font-weight:700}
+    dd{margin:0;color:var(--muted)}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    @media (max-width:860px){
+      .resume-header{flex-direction:column}
+      dl{grid-template-columns:1fr}
+    }
+
+    @media print{
+      body{background:#fff;padding:0}
+      .container{box-shadow:none;border-radius:0}
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="site-title">Achintya B S</h1>
-      <nav class="main-nav" aria-label="Main Navigation">
-        <a href="index.html">Home</a>
-        <a href="resume.html" class="active">Resume</a>
-        <a href="about.html">Bio</a>
-      </nav>
-    </div>
-  </header>
+  <main class="container" role="main">
+    <header class="resume-header" role="banner">
+      <div>
+        <h2>Dhanush H N</h2>
+        <div class="contact-small">
+          CSE Student — AIT College, Chikkamagaluru
+        </div>
+        <div class="contact-small" style="margin-top:6px">
+          <a href="mailto:dhanushh2005@email.com">dhanushh2005@email.com</a> · +91 90193 72113
+        </div>
+      </div>
 
-  <main class="container resume">
-    <section class="resume-header">
-      <div>
-        <h2>Achintya B S</h2>
-        <p>achintya.bs2006@email.com · <a href="https://github.com/AchinthaBS-dev">github.com/AchinthaBS-dev</a></p>
+      <div style="text-align:right" aria-hidden="false">
+        <div class="muted">Location</div>
+        <div>Chikkamagaluru, Karnataka</div>
+        <div style="margin-top:8px"><a href="https://github.com/dhanushh2005-beep" target="_blank" rel="noopener">github.com/dhanushh2005-beep</a></div>
       </div>
-      <div>
-        <p>Bangalore, India</p>
-      </div>
+    </header>
+
+    <section class="section">
+      <h3>Professional Summary</h3>
+      <p class="muted">Motivated Computer Science student with practical experience building small web projects and portfolios. Strong interest in frontend development, responsive design, and improving problem-solving & coding skills. Quick learner and collaborative team member.</p>
     </section>
 
-    <section>
-      <h3>Summary</h3>
-      <p>Software engineering student with expertise in cloud-native architectures, distributed systems, and backend optimization. Proficient in modern DevOps practices, microservices design, and infrastructure automation. Proven track record of building production-grade systems with focus on scalability and reliability.</p>
-    </section>
-
-    <section>
+    <section class="section">
       <h3>Technical Skills</h3>
-      <div class="resume-skill-tags">
-        <span class="skill-tag">Go</span>
-        <span class="skill-tag">Rust</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">GraphQL</span>
-        <span class="skill-tag">REST APIs</span>
-        <span class="skill-tag">Kubernetes</span>
-        <span class="skill-tag">AWS</span>
-        <span class="skill-tag">GCP</span>
-        <span class="skill-tag">Terraform</span>
-        <span class="skill-tag">Prometheus</span>
-        <span class="skill-tag">Grafana</span>
-        <span class="skill-tag">Kafka</span>
-        <span class="skill-tag">Redis</span>
-        <span class="skill-tag">Elasticsearch</span>
-        <span class="skill-tag">Jenkins</span>
+      <div class="skills" role="list">
+        <span class="skill-tag" role="listitem">HTML</span>
+        <span class="skill-tag" role="listitem">CSS</span>
+        <span class="skill-tag" role="listitem">JavaScript</span>
+        <span class="skill-tag" role="listitem">Git & GitHub</span>
+        <span class="skill-tag" role="listitem">Responsive Design</span>
+        <span class="skill-tag" role="listitem">Basic Java</span>
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <h3>Projects</h3>
-      <div class="resume-project">
-        <strong>Distributed Event Processing System</strong> — Kafka, Go, Kubernetes (2025)
-        <p>Engineered high-throughput event streaming platform handling 100K+ events/second with automated failover and 99.9% uptime SLA using Prometheus monitoring.</p>
+
+      <div class="project">
+        <strong>Personal Portfolio Website</strong>
+        <div class="meta">HTML, CSS, GitHub Pages</div>
+        <p class="muted">A single-file responsive portfolio showcasing biodata, projects and resume. Hosted on GitHub Pages for assignment submission.</p>
       </div>
 
-      <div class="resume-project">
-        <strong>GraphQL API Gateway</strong> — TypeScript, Apollo, Microservices (2025)
-        <p>Designed unified API gateway aggregating 5+ microservices with Redis caching reducing database load by 60% and real-time subscriptions support.</p>
-      </div>
-
-      <div class="resume-project">
-        <strong>Cloud Cost Optimization Tool</strong> — AWS, Terraform, Python (2024)
-        <p>Built analytics dashboard for multi-cloud resource utilization with automated cost alerts and optimization recommendations, achieving 35% annual savings.</p>
+      <div class="project">
+        <strong>Notes App</strong>
+        <div class="meta">HTML, CSS, JavaScript</div>
+        <p class="muted">Simple notes application with add/delete functionality using localStorage for persistence.</p>
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <h3>Education</h3>
-      <p>Adichunchanagiri Institute of Technology — B.E. in Computer Science Engineering (2023–2027), Chikmagalur, India</p>
+
+      <p><strong>BE — Computer Science & Engineering (CSE)</strong> — AIT College, Chikkamagaluru (2022 — Present)</p>
+
+      <p><strong>PUC — Science</strong> — St Mary's College (2020 — 2022) — <strong>88%</strong></p>
+
+      <p><strong>School (SSLC)</strong> — JES School (Until 2020)</p>
     </section>
 
-    <section>
-      <h3>Certifications & Activities</h3>
-      <p>AWS Certified Solutions Architect Associate — Amazon Web Services, 2025</p>
-      <p>Kubernetes Application Developer (CKAD) — Linux Foundation, 2024</p>
-      <p>Speaker at DevOps meetup on Kubernetes optimization and cost reduction, Bangalore 2024</p>
+    <section class="section">
+      <h3>Contact / Details</h3>
+      <dl>
+        <div><dt>Name</dt><dd>Dhanush H N</dd></div>
+        <div><dt>Email</dt><dd>dhanushh2005@email.com</dd></div>
+        <div><dt>Phone</dt><dd>+91 90193 72113</dd></div>
+        <div><dt>Address</dt><dd>Chikkamagaluru, Karnataka</dd></div>
+      </dl>
     </section>
 
-    <p><small>Last updated: 2025</small></p>
+    <p style="margin-top:12px;color:var(--muted);font-size:0.9rem">Last updated: 2025</p>
+
+    <footer>
+      <small>© 2025 · Dhanush H N</small>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© Achintya B S</small>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/script.js"></script>
 </body>
 </html>
